@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Weather App | Rysth Design</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="weather">
+			<header class="weather__header">
+				<h1 class="weather__title">Weather App</h1>
+				<form id="weather__form" class="weather__form">
+					<input
+						type="text"
+						class="weather__city"
+						name="weather__city"
+						id="weather__city"
+						placeholder="Enter City"
+						required
+					/>
+					<button type="submit" class="weather__button">
+						Get Weather
+					</button>
+				</form>
+			</header>
+			<div class="weather__content" id="weather__content">
+				<img
+					id="weather__image"
+					class="weather__image"
+					alt="Open Weather Map Icon"
+				/>
+				<h2 class="weather__degree" id="weather__degree">--</h2>
+				<p class="weather__state" id="weather__state"></p>
+				<div class="weather__description">
+					<div class="weather__card">
+						<p class="weather__card--content">Feels like: --</p>
+					</div>
+					<div class="weather__card">
+						<p class="weather__card--content">Humidity: --</p>
+					</div>
+					<div class="weather__card">
+						<p class="weather__card--content">Wind Speed: --</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+	--CL-primary-blue: #31ff9f5e;
+	--CL-neutral-white: #ffffff;
+	--CL-neutral-black: #000000;
+
+	--FF-primary-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: var(--FF-primary-poppins);
+}
+
+/* General Styles */
+
+/* Weather Header */
+.weather {
+	width: min(90%, 40rem);
+	margin: 0 auto;
+	box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.15);
+	border-radius: 2em;
+	padding: 2em;
+	text-align: center;
+	background-color: var(--CL-primary-blue);
+}
+
+.weather__header {
+	margin: 1em 0;
+}
+
+.weather__title {
+	font-size: 3rem;
+	margin: 0.5em 0;
+}
+
+.weather__form {
+	display: grid;
+	gap: calc(1em + 0.5vw);
+}
+
+.weather__city,
+.weather__button {
+	padding: 0.6em;
+	font-size: 1.35rem;
+	font-family: var(--FF-primary-poppins);
+	border: none;
+	box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.15);
+	border-radius: 0.35em;
+}
+
+.weather__button {
+	font-weight: bold;
+	background-color: var(--CL-neutral-white);
+	cursor: pointer;
+}
+
+/* Weather Content */
+
+.weather__content {
+	display: none;
+}
+
+.weather__picture {
+	margin: 1em 0;
+}
+
+.weather__image {
+	width: 10rem;
+	object-fit: cover;
+	margin: 1em 0;
+}
+
+.weather__degree {
+	font-size: calc(4rem + 1vw);
+}
+
+.weather__state {
+	font-size: calc(1.25rem + 0.5vw);
+}
+
+.weather__description {
+	display: grid;
+	gap: calc(1em + 0.5vw);
+	padding: 2em 0;
+}
+
+.weather__card {
+	background-color: var(--CL-neutral-white);
+	padding: 1em;
+	box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.15);
+	border-radius: 0.35em;
+}
+
+.weather__card--content {
+	font-size: 1.35rem;
+}
+
+@media (min-width: 768px) {
+	.weather__form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.weather__city {
+		width: 65%;
+	}
+
+	.weather__button {
+		transition: background-color 0.15s ease-out;
+	}
+
+	.weather__button:hover {
+		background-color: var(--CL-neutral-black);
+		color: white;
+	}
+
+	.weather__description {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+
+	.weather__card--content {
+		display: grid;
+	}
+}
